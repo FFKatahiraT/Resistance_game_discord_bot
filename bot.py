@@ -6,7 +6,7 @@ from random import shuffle
 
 members_ID,members_names, result=[],[], []
 code=str(0)
-GUILD = ("Flower_FLower's server")
+GUILD = ("Guild Name")
 #client = commands.Bot(command_prefix='')
 client = discord.Client()
 
@@ -24,7 +24,7 @@ async def on_ready():
 	)
 	global to_server
 	print(client.guilds)
-	to_server = client.get_channel(692411449426968579)
+	to_server = client.get_channel(CHANNEL_ID)
 	members = '\n - '.join([member.name for member in guild.members])  
 	print(f'Guild Members:\n - {members}')
 '''
@@ -86,4 +86,4 @@ async def on_message(message):
 			'When the game starts, a leader should choose a team.\n'
 			'To set up a team a leader should type teammate number: MISSION 0 1 2\n'
 			'Then I will send results to server chat\n')
-client.run('Njk2NjYyOTczNjc4MDkyMjg4.XosAMw.mllUBPNVP-lxHVoFSSyUotawA9w')
+client.run('BOT_TOKEN')
